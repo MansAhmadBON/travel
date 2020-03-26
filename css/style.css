@@ -1,3 +1,46 @@
 * {
     font-family: 'Lato', sans-serif;
 }
+
+
+.content-box {
+    max-width: 1060px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-box--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*  HERO  */
+.Hero {
+    background-image: url("../assets/images/bg/bg-header.png");
+    background-size: cover;
+}
+
+/* header-page */
+.header-page__content {
+    padding-top: 55px;
+}
+
+.header-page__nav {
+    max-width: 490px;
+    width: 100%;
+}
+
+.header-page__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-page__link {
+    font-family: Lato;
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
