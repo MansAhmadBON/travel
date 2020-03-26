@@ -4,9 +4,11 @@
 
 
 .content-box {
+    position: relative;
     max-width: 1060px;
     width: 100%;
     margin: 0 auto;
+    z-index: 10;
 }
 
 .content-box--header {
@@ -14,11 +16,30 @@
     align-items: center;
     justify-content: space-between;
 }
+/*.content-box--primary {*/
+/*    max-height: 620px;*/
+/*    height: 100%;*/
+/*}*/
 
 /*  HERO  */
 .Hero {
     background-image: url("../assets/images/bg/bg-header.png");
+    height: 100vh;
     background-size: cover;
+    position: relative;
+}
+
+.Hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%);
 }
 
 /* header-page */
@@ -44,3 +65,105 @@
     font-size: 18px;
     line-height: 24px;
 }
+.header-page__link:hover {
+    color: #1B7DFF;
+}
+
+/* primary (MAIN) */
+.primary {
+    padding-top: 180px;
+}
+
+.primary__title-page {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFF;
+    width: 619px;
+}
+
+.primary__text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    width: 545px;
+    margin-top: 22px;
+    margin-bottom: 60px;
+}
+
+/* form-search */
+.form-search {
+    max-width: 886px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+}
+
+.form-search input {
+    max-width: 300px;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+    position: relative;
+    background-image: url("../assets/images/svg/Oval.svg");
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    outline: none;
+}
+.form-search input:hover {
+    border-bottom: 2px solid #FFF;
+}
+
+.form-search input:focus {
+    border-bottom: 2px solid #FFF;
+}
+
+.form-search input::placeholder {
+    text-align: center;
+    color: #fff;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+}
+
+.form-search button {
+    width: 171px;
+    height: 58px;
+    border: 0;
+    background-color: #1B7DFF;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.form-search button:hover {
+    opacity: .8;
+}
+
+
+
+
+
+
+
+
+
+
