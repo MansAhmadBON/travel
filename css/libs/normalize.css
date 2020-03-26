@@ -15,7 +15,9 @@ html {
 
 /* Sections
    ========================================================================== */
-
+div, p, span, ul, li, img, section, a, figure, figcaption, h1, h2, h3, h4, h5, h6, input, button, textarea {
+    box-sizing: border-box;
+}
 /**
  * Remove the margin in all browsers.
  */
@@ -39,7 +41,7 @@ main {
 
 h1 {
     font-size: 2em;
-    margin: 0.67em 0;
+    margin: 0;
 }
 
 /* Grouping content
