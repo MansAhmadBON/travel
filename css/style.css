@@ -17,9 +17,10 @@
     justify-content: space-between;
 }
 
-.content-box--trip, .content-box--prefecture {
+.content-box--trip, .content-box--prefecture, .content-box--places {
     max-width: 1260px;
 }
+
 
 .link-figure {
     font-style: normal;
@@ -405,11 +406,130 @@
 }
 
 
+/* Places */
+.Places {
+    padding-top: 65px;
+}
 
+.Places__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+}
 
+.Places__title::after {
+    content: "";
+    display: block;
+    max-width: 252px;
+    height: 2px;
+    background-color: #006DFE;
+    margin-top: 9px;
+}
 
+.Places-content {
+    padding-top: 55px;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 33.3%;
+    flex-wrap: wrap;
+}
 
+.Places__item {
+    margin-bottom: 55px;
+}
 
+.card {
+    position: relative;
+}
+
+.card figcaption{
+    height: 55px;
+    background-color: rgba(21, 24, 36, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    max-width: 386px;
+    width: 100%;
+    position: absolute;
+    bottom: 3px;
+    transition: all .3s ease-in-out;
+}
+
+.card:hover figcaption{
+    height: 80px;
+    background-color: rgba(21, 24, 36, 0.8);
+}
+
+.card__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.card__description div {
+    max-width: 105px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card__description div span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: default;
+}
+
+.card__btn {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    border: 0;
+    width: 16px;
+    outline: none;
+}
+
+.card__btn--like {
+    background-image: url("../assets/images/svg/ico-like.svg");
+}
+
+.card__btn--comment {
+    background-image: url("../assets/images/svg/ico-chat.svg");
+}
+
+.Places__item p{
+    max-width: 370px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #102746;
+    margin-top: 45px;
+}
+
+.Places__item>button {
+    width: 118px;
+    height: 45px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background-color: #006DFE;
+    border: none;
+    transition: all .3s;
+}
+.Places__item>button:hover {
+    opacity: .8;
+}
 
 
 
