@@ -12,6 +12,8 @@ html {
     width: 100%;
     margin: 0 auto;
     z-index: 10;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .content-box--header {
@@ -42,6 +44,7 @@ html {
     height: 127vh;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
 
 .Hero::after {
@@ -58,6 +61,26 @@ html {
 }
 
 /* header-page */
+.header-page--desktop {
+    height: 86px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.header-page--mobile {
+    height: 86px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: none;
+    justify-content: space-around;
+}
+
 .header-page__content {
     padding-top: 55px;
 }
@@ -88,7 +111,7 @@ html {
 }
 
 .header-page--scrolling {
-    height: 92px;
+    height: 86px;
     background: #000;
     border-bottom: 1px solid #fff;
     padding-bottom: 5px;
@@ -103,7 +126,7 @@ html {
 
 /* primary (MAIN) */
 .primary {
-    padding-top: 180px;
+    padding-top: 260px;
 }
 
 .primary__title-page {
@@ -112,7 +135,7 @@ html {
     font-size: 50px;
     line-height: 60px;
     color: #FFF;
-    width: 619px;
+    max-width: 619px;
 }
 
 .primary__text {
@@ -121,7 +144,7 @@ html {
     font-size: 16px;
     line-height: 24px;
     color: #fff;
-    width: 545px;
+    max-width: 545px;
     margin-top: 22px;
     margin-bottom: 60px;
 }
@@ -232,7 +255,7 @@ html {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    width: 315px;
+    max-width: 315px;
 }
 
 .Benefits__item a {
@@ -361,17 +384,21 @@ html {
 .Trip__item--3 {
     max-width: 415px;
     margin-right: 5px;
+    flex-grow: 1;
 }
 
 .Trip__item--4 {
     max-width: 415px;
     margin: 0 4px;
+    flex-grow: 1;
 }
 
 .Trip__item--5 {
     max-width: 411px;
     margin-left: 5px;
+    flex-grow: 3;
 }
+
 
 /* Prefecture */
 .Prefecture {
@@ -392,6 +419,14 @@ html {
 
 .Prefecture-content__description {
     max-width: 519px;
+}
+
+.Prefecture-content__description--1 {
+    margin-left: 20px;
+}
+
+.Prefecture-content__description--2 {
+    margin-right: 20px;
 }
 
 .Prefecture-content--2 .Prefecture-content__description .Prefecture-content__title {
@@ -424,6 +459,7 @@ html {
 
 .Prefecture-content--1 .Prefecture-content__description .link-figure {
     margin-top: 60px;
+    max-width: 240px;
 }
 
 
@@ -660,6 +696,274 @@ footer {
 
 
 
+/* header-mobile*/
+.wrapper-header--mobile-active {
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(14, 29, 40, .5);;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.header-mobile--show {
+    display: block;
+    position: fixed;
+    animation-name: menu-mobile-show;
+    animation: .3s ease-in-out;
+}
+
+.header-page--mobile-active {
+    display: flex;
+}
+
+.header-mobile {
+    display: none;
+}
+
+.header-mobile__btn {
+    width: 50px;
+    height: 31px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.line {
+    height: 5px;
+    background-color: #fff;
+}
+
+.line--2 {
+    margin: 7px auto;
+}
+
+@media (max-width: 850px) {
+    .content-box--primary {
+        text-align: center;
+    }
+
+    .primary__title-page {
+        margin:  0 auto;
+    }
+
+    .primary__text {
+        margin: 22px auto 60px;
+    }
+
+    .form-search {
+        height: 300px;
+        width: 300px;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .form-search button {
+        margin: 0 auto;
+    }
+
+    .Prefecture-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Prefecture-content__description {
+        margin-right: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .Prefecture-content--1 .Prefecture-content__description .link-figure {
+        max-width: 240px;
+        margin: 40px auto 0;
+    }
+
+    .Prefecture-content--2 .Prefecture-content__description .Prefecture-content__title {
+        max-width: 100%;
+    }
+
+    .Prefecture-content--2 .Prefecture-content__description .link-figure {
+        margin: 40px auto 0;
+    }
+}
+
+
+
+@media (max-width: 791px) {
+    .Places-content {
+        justify-content: center;
+    }
+    .Places__header {
+        text-align: center;
+    }
+    .Places__title::after {
+        margin: 9px auto 0;
+    }
+    .Places__item>button {
+        margin:  0 auto;
+    }
+    .footer-links__list--2 {
+        margin: 0 40px;
+    }
+}
+
+@media (max-width: 680px) {
+    .primary {
+        padding-top: 190px;
+    }
+
+    .primary__title-page {
+        font-size: 40px;
+    }
+
+    .primary__text {
+        margin: 22px auto 30px;
+    }
+
+    .header-page--mobile {
+        display: flex;
+    }
+
+    .header-page--desktop {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+    }
+
+    .header-page--mobile-active {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        background: #000;
+    }
+
+    .header-page--mobile-active img{
+        margin-top: 25px;
+    }
+
+    .header-page__nav--mobile {
+        max-width: 490px;
+        width: 100%;
+        height: 50%;
+    }
+
+    .header-page__list--mobile {
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+        padding-top: 100%;
+    }
+
+    .form-search {
+        height: 200px;
+    }
+
+    .form-search button {
+        height: 50px;
+    }
+
+    .Benefits {
+        top: -90px;
+    }
+
+    .Trip__item figcaption {
+        font-size: 25px;
+    }
+
+    .Prefecture-content img {
+        width: 100%;
+    }
+
+    .content-box--footer img {
+        width: 120px;
+    }
+
+}
+
+
+@media (max-width: 530px) {
+    .Benefits__title {
+        text-align: center;
+    }
+    .Benefits__content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Benefits__content .Benefits__item {
+        align-items: center;
+        text-align: center;
+    }
+
+    .Benefits__content .Benefits__item:not(:last-child) {
+        margin:  0 auto 60px;
+    }
+
+    .content-box--footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-box--footer img {
+        width: 120px;
+        margin-bottom: 40px;
+    }
+
+    .Trip__content div {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .Trip__item {
+        margin: 20px auto;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .Trip__title {
+        font-size: 18px;
+    }
+    .link-figure {
+        font-size: 16px;
+    }
+    .card__img {
+        width: 100%;
+    }
+}
+
+@media (max-height: 568px) {
+    .Hero {
+        height: 160vh;
+    }
+}
+
+
+
+
+.content-mobile-show--start {
+    position: relative;
+    left: -100%;
+}
+
+@keyframes menu-mobile-show {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.header-page--mobile-hide {
+    display: none;
+}
 
 
 @keyframes arrow-right {
