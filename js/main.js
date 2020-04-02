@@ -5,6 +5,22 @@ window.onload = function () {
     const VideosContent = D.querySelector('.Videos-content');
     const VideosPoster = D.querySelector('.Videos__poster');
     const headerDesktop = D.querySelector('.header-page--desktop');
+    const headerMobile = D.querySelector('.header-page--mobile');
+    const headerMobileContent = D.querySelector('.wrapper-header--mobile-active');
+    const headerMobileBtn = D.querySelector('.header-mobile__btn');
+
+    headerMobileBtn.addEventListener('click', function () {
+        headerMobileContent.classList.add('header-mobile--show');
+        headerMobile.classList.add('header-page--mobile-hide');
+    });
+
+    D.querySelector('.wrapper-header--mobile-active').addEventListener('click', function (e) {
+        if(e.target.className === 'wrapper-header--mobile-active header-mobile--show') {
+            headerMobileContent.classList.remove('header-mobile--show');
+            headerMobile.classList.remove('header-page--mobile-hide');
+        }
+    });
+
 
     btnPlayVideo.addEventListener('click', function () {
         VideosContent.classList.add('Videos-content--active');
@@ -20,8 +36,11 @@ window.onload = function () {
 
         if(currentPosition >= 80){
             headerDesktop.classList.add('header-page--scrolling');
+            headerMobile.classList.add('header-page--scrolling');
+
         } else {
             headerDesktop.classList.remove('header-page--scrolling');
+            headerMobile.classList.remove('header-page--scrolling');
         }
 
         sectionsPage.forEach(section => {
